@@ -1,1 +1,47 @@
 /*  your css code here. If applicable */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    width: 90%;
+    height: 80vh;
+}
+
+.panel {
+    flex: 1;
+    margin: 10px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: flex 0.5s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.panel.active {
+    flex: 5;
+}
+
+.panel .img-text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #fff;
+    font-size: 24px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    margin: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.panel.active .img-text {
+    opacity: 1;
+}
